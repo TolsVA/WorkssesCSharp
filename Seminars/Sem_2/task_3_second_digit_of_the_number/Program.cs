@@ -5,8 +5,6 @@ int caunt = 0;
 
 string num = enterNumber(caunt, lenghtNum);
 
-// char[] chars = num.ToCharArray();
-
 secondDigit(num.ToCharArray());
 
 string enterNumber(int caunt, int lenghtNum) {
@@ -38,7 +36,7 @@ void secondDigit(char[] chars) {
     print($"Выбери номер позиции числа от 1 до {chars.Length}");
 
     int number = Convert.ToInt32(Console.ReadLine());
-    
+
     foreach(var (value, indexChars) in chars.Select((value, indexChars) => (value, indexChars))) { 
         int lenght = 1;
         int rank = 1;
