@@ -1,0 +1,14 @@
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\obj\Debug\net7.0\task_3.GeneratedMSBuildEditorConfig.editorconfig
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\obj\Debug\net7.0\task_3.AssemblyInfoInputs.cache
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\obj\Debug\net7.0\task_3.AssemblyInfo.cs
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\obj\Debug\net7.0\task_3.csproj.CoreCompileInputs.cache
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\bin\Debug\net7.0\task_3.exe
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\bin\Debug\net7.0\task_3.deps.json
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\bin\Debug\net7.0\task_3.runtimeconfig.json
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\bin\Debug\net7.0\task_3.dll
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\bin\Debug\net7.0\task_3.pdb
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\obj\Debug\net7.0\task_3.dll
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\obj\Debug\net7.0\refint\task_3.dll
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\obj\Debug\net7.0\task_3.pdb
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\obj\Debug\net7.0\task_3.genruntimeconfig.cache
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_2\task_3\obj\Debug\net7.0\ref\task_3.dll

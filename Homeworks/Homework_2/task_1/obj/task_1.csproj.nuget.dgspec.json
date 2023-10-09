@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\Homework_2.csproj": {}
+    "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\task_1\\task_1.csproj": {}
   },
   "projects": {
-    "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\Homework_2.csproj": {
+    "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\task_1\\task_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\Homework_2.csproj",
-        "projectName": "Homework_2",
-        "projectPath": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\Homework_2.csproj",
+        "projectUniqueName": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\task_1\\task_1.csproj",
+        "projectName": "task_1",
+        "projectPath": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\task_1\\task_1.csproj",
         "packagesPath": "C:\\Users\\himto\\.nuget\\packages\\",
-        "outputPath": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\obj\\",
+        "outputPath": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\task_1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

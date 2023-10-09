@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\Homework_2.csproj",
-      "projectName": "Homework_2",
-      "projectPath": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\Homework_2.csproj",
+      "projectUniqueName": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\task_3\\task_3.csproj",
+      "projectName": "task_3",
+      "projectPath": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\task_3\\task_3.csproj",
       "packagesPath": "C:\\Users\\himto\\.nuget\\packages\\",
-      "outputPath": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\obj\\",
+      "outputPath": "D:\\GB\\Курс_2\\Знакомство_с_языками_C#\\WorkssesCSharp\\Homeworks\\Homework_2\\task_3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
