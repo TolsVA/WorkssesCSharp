@@ -1,0 +1,14 @@
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\bin\Debug\net7.0\Homework_1.exe
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\bin\Debug\net7.0\Homework_1.deps.json
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\bin\Debug\net7.0\Homework_1.runtimeconfig.json
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\bin\Debug\net7.0\Homework_1.dll
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\bin\Debug\net7.0\Homework_1.pdb
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\obj\Debug\net7.0\Homework_1.GeneratedMSBuildEditorConfig.editorconfig
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\obj\Debug\net7.0\Homework_1.AssemblyInfoInputs.cache
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\obj\Debug\net7.0\Homework_1.AssemblyInfo.cs
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\obj\Debug\net7.0\Homework_1.csproj.CoreCompileInputs.cache
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\obj\Debug\net7.0\Homework_1.dll
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\obj\Debug\net7.0\refint\Homework_1.dll
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\obj\Debug\net7.0\Homework_1.pdb
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\obj\Debug\net7.0\Homework_1.genruntimeconfig.cache
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Homeworks\Homework_1\obj\Debug\net7.0\ref\Homework_1.dll
