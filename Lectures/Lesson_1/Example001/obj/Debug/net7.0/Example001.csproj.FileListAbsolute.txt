@@ -1,0 +1,14 @@
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\bin\Debug\net7.0\Example001.exe
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\bin\Debug\net7.0\Example001.deps.json
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\bin\Debug\net7.0\Example001.runtimeconfig.json
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\bin\Debug\net7.0\Example001.dll
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\bin\Debug\net7.0\Example001.pdb
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\obj\Debug\net7.0\Example001.GeneratedMSBuildEditorConfig.editorconfig
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\obj\Debug\net7.0\Example001.AssemblyInfoInputs.cache
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\obj\Debug\net7.0\Example001.AssemblyInfo.cs
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\obj\Debug\net7.0\Example001.csproj.CoreCompileInputs.cache
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\obj\Debug\net7.0\Example001.dll
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\obj\Debug\net7.0\refint\Example001.dll
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\obj\Debug\net7.0\Example001.pdb
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\obj\Debug\net7.0\Example001.genruntimeconfig.cache
+D:\GB\Курс_2\Знакомство_с_языками_C#\WorkssesCSharp\Lectures\Lesson_1\Example001\obj\Debug\net7.0\ref\Example001.dll
