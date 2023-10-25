@@ -7,9 +7,9 @@ int caunt = 0;
 int[] resultArr = FillArray(0);
 PrintMesseg("");
 if (resultArr.Length > 0){
-    PrintMesseg($"Вы ввели числа больше или раво нулю  -> {resultArr.Length} шт.");
+    PrintMesseg($"Вы ввели числа больше нуля  -> {resultArr.Length} шт.");
 } else {
-    PrintMesseg($"Вы ввели все отрицательные числа");
+    PrintMesseg($"Вы ввели все отрицательные числа, либо числа равные 0");
 }
 
 PrintMesseg($"[{String.Join(", ", resultArr)}]");
