@@ -37,13 +37,14 @@ public class Answer
     static void PrintListAvr(double[] list)
     {
         System.Console.WriteLine("The averages in columns are:");
-        string lisrDouble = String.Empty;
+        string listDouble = String.Empty;
         foreach (var item in list)
         {
-            lisrDouble += $"{string.Format("{0:f2}", item)}\t";
+            listDouble += $"{string.Format("{0:f2}", item)}\t";
         }
-        System.Console.WriteLine(lisrDouble.Remove(lisrDouble.Length - 1));
-        // System.Console.WriteLine(lisrDouble[..^1]);
+        // Убираем последнюю табуляцию
+        System.Console.WriteLine(listDouble[..^1]);
+        // System.Console.WriteLine(listDouble.Remove(listDouble.Length - 1));
     }
 
     static double[] FindAverageInColumns(int[,] matrix)

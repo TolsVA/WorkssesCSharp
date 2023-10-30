@@ -1,14 +1,13 @@
 ﻿using Microsoft.VisualBasic;
 using System;
 
-string word = enterAStringOfLetters();
+//Alt+Shift+f - форматирует код
+string originalWord = enterAStringOfLetters();
 
-string[] words = new string[factorial(word.Length)];
-int countIndex = 0;
-int tailLength = word.Length - 2;
-int index = 0;
+string[] words = new string[factorial(originalWord.Length)];
 int indexWords = 0;
-allWords(word, countIndex, tailLength);
+
+allWords(originalWord, String.Empty);
 
 Console.WriteLine($"[{String.Join(", ", words)}]");
 
@@ -18,66 +17,47 @@ string enterAStringOfLetters()
     while (flag)
     {
         string? word = Console.ReadLine();
-        if (Int32.TryParse(word, out int number))
-        {
-            System.Console.WriteLine("Вводить можно только буквы!!!");
-        }
-        else if (word == null || word == "")
-        {
-            System.Console.WriteLine("Вы не чего не ввели!!!");
-        }
+        if (word == null || word == "") { Console.WriteLine("Вы не чего не ввели!!!"); }
         else
         {
             flag = false;
             return word;
         }
     }
-    return "";
+    return String.Empty;
 }
 
+bool isEmpty(string word) => word.Length == 0;
 
-string allWordsChar(string word, int position)
+int factorial(int n) { if (n == 1) return 1; else return n * factorial(n - 1); }
+
+
+void allWords(string word, string permutation)
 {
-    char[] chars = word.ToCharArray();
-    char temp = chars[position];
-    for (int i = position; i < chars.Length - 1; i++)
+    if (isEmpty(word))
     {
-        chars[i] = chars[i + 1];
+        addWords(permutation);
+        return;
     }
-    chars[chars.Length - 1] = temp;
 
-    return $"{String.Join("", chars)}";
+    for (int i = 0; i < word.Length; i++)
+    {
+        // Удалим символ по индексу и сохраним остальное
+        string newWord = word.Remove(i, 1);
+
+        //Добавим символ и сохраним перестановку
+        string newPermutation = permutation + word[i];
+
+        allWords(newWord, newPermutation);
+    }
+
 }
 
-int factorial(int n)
+void addWords(string word)
 {
-    if (n == 1) return 1; else return n * factorial(n - 1);
+    if (indexWords <= words.Length)
+    {
+        words[indexWords] = word;
+        indexWords++;
+    }
 }
-
-
-void allWords(string word, int count, int tailLength)
-{
-    int length = word.Length - tailLength;
-
-    // addWords(word);
-
-    // for (int i = index; i < length; i++) {
-    //     index++;
-
-    //     word = allWordsChar(word, count);
-
-    //     addWords(word);
-
-    //     if (i == length) {
-    //         index = 0;
-    //         tailLength--;
-    //         count++;
-    //         if (tailLength < 0) return;
-
-
-    //     } 
-
-    //     allWords(word, count, tailLength);
-    // } 
-}
-//Alt+Shift+f - форматирует код
