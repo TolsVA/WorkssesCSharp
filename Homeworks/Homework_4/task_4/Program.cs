@@ -39,7 +39,6 @@ void allWords(string word, string permutation)
     }
 
     for (int i = 0; i < word.Length; i++) { allWords(word.Remove(i, 1), permutation + word[i]); }
-
 }
 
 void addWords(string word) { if (indexWords <= words.Length) { words[indexWords++] = word; } }
