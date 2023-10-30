@@ -30,7 +30,6 @@ bool isEmpty(string word) => word.Length == 0;
 
 int factorial(int n) { if (n == 1) return 1; else return n * factorial(n - 1); }
 
-
 void allWords(string word, string permutation)
 {
     if (isEmpty(word))
@@ -39,12 +38,7 @@ void allWords(string word, string permutation)
         return;
     }
 
-    for (int i = 0; i < word.Length; i++)
-    {
-        string newWord = word.Remove(i, 1);
-        string newPermutation = permutation + word[i];
-        allWords(newWord, newPermutation);
-    }
+    for (int i = 0; i < word.Length; i++) { allWords(word.Remove(i, 1), permutation + word[i]); }
 
 }
 
