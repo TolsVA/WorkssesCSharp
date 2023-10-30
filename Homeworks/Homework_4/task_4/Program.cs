@@ -42,11 +42,4 @@ void allWords(string word, string permutation)
 
 }
 
-void addWords(string word)
-{
-    if (indexWords <= words.Length)
-    {
-        words[indexWords] = word;
-        indexWords++;
-    }
-}
+void addWords(string word) { if (indexWords <= words.Length) { words[indexWords++] = word; } }
