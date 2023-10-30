@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 using System;
 
-//Alt+Shift+f - форматирует код
 string originalWord = enterAStringOfLetters();
 
 string[] words = new string[factorial(originalWord.Length)];
@@ -42,12 +41,8 @@ void allWords(string word, string permutation)
 
     for (int i = 0; i < word.Length; i++)
     {
-        // Удалим символ по индексу и сохраним остальное
         string newWord = word.Remove(i, 1);
-
-        //Добавим символ и сохраним перестановку
         string newPermutation = permutation + word[i];
-
         allWords(newWord, newPermutation);
     }
 
