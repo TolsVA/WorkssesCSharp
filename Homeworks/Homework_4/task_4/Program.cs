@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualBasic;
 using System;
 
+Console.Clear();
+
 string originalWord = enterAStringOfLetters();
 
 string[] words = new string[factorial(originalWord.Length)];
@@ -12,6 +14,7 @@ Console.WriteLine($"[{String.Join(", ", words)}]");
 
 string enterAStringOfLetters()
 {
+    Console.WriteLine("Введите произвольные символы!");
     bool flag = true;
     while (flag)
     {
