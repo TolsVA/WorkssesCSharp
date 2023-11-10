@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Microsoft.VisualBasic;
+using System.Diagnostics;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Intrinsics.X86;
 using System.Collections.Specialized;
@@ -32,7 +33,7 @@ AllOptions(temp, revers);
 
 // sw.Stop();
 
-// Console.WriteLine($"[{String.Join(", ", words)}]");
+Console.WriteLine($"[{String.Join(", ", words)}]");
 
 System.Console.WriteLine($"Время выполнения -> {sw.ElapsedMilliseconds}  caunt = {caunt} wordsLength = {wordsLength} лишних итераций -> {caunt - wordsLength}   summIndex = {summIndex}");
 
@@ -59,93 +60,77 @@ string ReversTemp(string revers)
 
 void AllOptions(string temp, string revers)
 {
-    int result = Convert.ToInt32(revers) - 1;
-    int system = temp.Length;
+    int result = Convert.ToInt32(revers);
+   
     string newResult = "";
 
     sw.Start();
 
-    // while (result < Convert.ToInt32(temp))
-    // {
-    //     result = AddOne(++result, system, 1, 0);
-    //     System.Console.WriteLine($"result = {result}");
-    //     if (summIndex == SummElementResult(result))
-    //     {
-    //         newResult = NewResult(Convert.ToString(result));
-
-    //         // System.Console.WriteLine($"newResult = {newResult}");
-
-    //         Summ(newResult);
-    //     }
-        caunt++;
-    // }
-
-
-
-    string[] strings = new string[factorial(originalWord.Length)];
-
-    string[] stringsOst = new string[strings.Length];
-
-    int lengthFac = factorial(originalWord.Length) / system;
-
-    int index = 0;
-
-    for (int i = 0; i < strings.Length; i++)
+    while (result <= Convert.ToInt32(temp))
     {
-        string wordRemove = originalWord;
-        wordRemove = wordRemove.Remove(i, 1);
-        for (int j = 0; j < lengthFac; j++)
+        caunt++;
+        result = Examination(result);
+
+        while (Compare(result))
         {
-            strings[index] = originalWord[i].ToString();
-            wordRemove = Shift(wordRemove);
-            stringsOst[index] = wordRemove;
-            System.Console.WriteLine($"[{String.Join(", ", strings)}]");   //Запусти код и все поймеш
-            System.Console.WriteLine($"[{String.Join(", ", stringsOst)}]");
-            // allWords2e(strings, stringsOst, index);
-            index++;
+            result += 9;
+            result = Examination(result);
         }
 
-    }
+        // Console.WriteLine($"result = {result}  MaxElement = {MaxElement(result, 0)}  Сумма = {SummElementResult(result)}" +
+        // $"  {MaxElement(result, 0) != (originalWordLength - 1)} - {SummElementResult(result) != summIndex}");
 
-    // allWords(originalWord, String.Empty);
+        newResult = NewResult(Convert.ToString(result));
+
+        addWords(CollectWord(newResult));
+
+        result += 9;
+    }
 
     sw.Stop();
 }
 
-void allWords2e(string[] strings, string[] stringsOst, int index)
-{
+string CollectWord(string num) {
+    string newWord = String.Empty;
+    for (int i = 0; i < num.Length; i++) newWord += originalWord[Convert.ToInt32(num[i].ToString())];
 
-                    System.Console.WriteLine($"[{String.Join(", ", strings)}]");   //Запусти код и все поймеш
-                System.Console.WriteLine($"[{String.Join(", ", stringsOst)}]");
-    // int ff = 3;
-    // while (ff > 0)
-    // {
-    //     for (int i = 0; i < strings.Length; i++)
-    //     {
-    //         string st = stringsOst[i].ToString();
-
-    //             // st = Shift(st);
-    //             strings[i] += st;
-    //             System.Console.WriteLine($"[{String.Join(", ", strings)}]");   //Запусти код и все поймеш
-    //             System.Console.WriteLine($"[{String.Join(", ", stringsOst)}]");
-
-    
-    //         // stringsOst[i] = st.Remove(i, 1);
-    //     }
-    //     ff--;
-    // }
-
+    return newWord;
 }
 
-string Shift(string wordRemove)
+int Examination(int result)
 {
-    string newTemp = "";
-    for (int i = 1; i < wordRemove.Length; i++)
+    while (MaxElement(result, 0) != (originalWordLength - 1))
     {
-        newTemp += wordRemove[i].ToString();
+        result += 9;
+        while (SummElementResult(result) != summIndex) result += 9;
+        
     }
-    newTemp += wordRemove[0].ToString();
-    return newTemp;
+    return result;
+}
+
+bool Compare(int num)
+{
+    int[] sum = new int[10];
+
+    while (num != 0)
+    {
+        if (++sum[num % 10] > 1) return true;
+        num = num / 10;
+    }
+
+    return false;
+}
+
+
+
+int MaxElement(int num, int max)
+{
+    if (num == 0) return max;
+
+    int temp = num % 10;
+    if (max < temp) max = temp;
+
+    return MaxElement(num / 10, max);
 }
 
 bool isEmpty(string word) => word.Length == 0;
@@ -172,37 +157,6 @@ string NewResult(string result)
     }
 
     return result;
-}
-
-void Summ(string result)
-{
-    String newWord = "";
-
-    int[] sum = new int[result.Length];
-
-    int num = 0;
-
-    for (int i = 0; i < result.Length; i++)
-    {
-        num = Convert.ToInt32(result[i].ToString());
-        sum[num]++;
-        newWord += originalWord[num];
-    }
-
-    if (AllElementsAreEqual(sum))
-    {
-        // System.Console.WriteLine($"result = {result}");
-        addWords(newWord);
-    }
-}
-
-bool AllElementsAreEqual(int[] ints)
-{
-    foreach (var item in ints)
-    {
-        if (item != 1) return false;
-    }
-    return true;
 }
 
 string enterAStringOfLetters()

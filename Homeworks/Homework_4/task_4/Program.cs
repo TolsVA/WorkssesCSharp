@@ -1,6 +1,4 @@
 ﻿using System.Diagnostics;
-using Microsoft.VisualBasic;
-using System;
 
 Console.Clear();
 
@@ -18,28 +16,23 @@ sw.Stop();
 
 Console.WriteLine($"[{String.Join(", ", words)}]");
 
-System.Console.WriteLine($"Время выполнения -> {sw.ElapsedMilliseconds}");
+Console.WriteLine($"Время выполнения -> {sw.ElapsedMilliseconds}");
 
 string enterAStringOfLetters()
 {
-    Console.WriteLine("Введите произвольные символы!");
-    bool flag = true;
-    while (flag)
+    while (true)
     {
+        Console.WriteLine("Введите произвольные символы!");
         string? word = Console.ReadLine();
-        if (word == null || word == "") { Console.WriteLine("Вы не чего не ввели!!!"); }
+        if (word == null || word == "") Console.WriteLine("Вы не чего не ввели!!!");
         else
-        {
-            flag = false;
             return word;
-        }
     }
-    return String.Empty;
 }
 
 bool isEmpty(string word) => word.Length == 0;
 
-int factorial(int n) { if (n == 1) return 1; else return n * factorial(n - 1); }
+int factorial(int n) => n == 1 ? 1 : n * factorial(n - 1);
 
 void allWords(string word, string permutation)
 {
@@ -49,7 +42,7 @@ void allWords(string word, string permutation)
         return;
     }
 
-    for (int i = 0; i < word.Length; i++) { allWords(word.Remove(i, 1), permutation + word[i]); }
+    for (int i = 0; i < word.Length; i++) allWords(word.Remove(i, 1), permutation + word[i]);
 }
 
 void addWords(string word) { if (indexWords <= words.Length) { words[indexWords++] = word; } }
