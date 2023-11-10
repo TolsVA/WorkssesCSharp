@@ -1,16 +1,24 @@
-﻿using Microsoft.VisualBasic;
+﻿using System.Diagnostics;
+using Microsoft.VisualBasic;
 using System;
 
 Console.Clear();
 
 string originalWord = enterAStringOfLetters();
 
+var sw = new Stopwatch();
+sw.Start();
+
 string[] words = new string[factorial(originalWord.Length)];
 int indexWords = 0;
 
 allWords(originalWord, String.Empty);
 
+sw.Stop();
+
 Console.WriteLine($"[{String.Join(", ", words)}]");
+
+System.Console.WriteLine($"Время выполнения -> {sw.ElapsedMilliseconds}");
 
 string enterAStringOfLetters()
 {

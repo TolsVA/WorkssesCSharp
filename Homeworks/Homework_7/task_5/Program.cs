@@ -2,12 +2,12 @@
 
 Console.Clear();
 int num = -1; 
-int system = 3; //Троичная система
+int system = 4; //Троичная система
 
 for (int i = 0; i <= 26; i++)
 {
     num = AddOne(++num, system, 1, 0);
-    System.Console.WriteLine(num);
+    System.Console.WriteLine($"i = {i}  num = {num}");
 }
 
 int AddOne(int num, int system, int digit, int remember) {
