@@ -1,15 +1,52 @@
 ﻿// Перевод числа из десетичной системы в любую другую
 //100 23 44
-int number = 26;
-int system = 3;
+int number = 200;
+int system = 5;
+int pref = 0;
+int next = 0;
+int temp = 0;
 string[] system16 = new string[] { "A", "B", "C", "D", "E", "F" };
 
 Console.Clear();
 string newNumberSystem = "";
-for (int i = 1; i <= number; i++)
+for (int i = 0; i <= number; i++)
 {
-    newNumberSystem = converter(i, system);
-    Console.WriteLine($"( {i} ) в ( 10 ) -> ( {newNumberSystem} ) в ( {system} )");
+    newNumberSystem = NewResult(converter(i, system));
+
+    temp = Convert.ToInt32(newNumberSystem);
+
+
+    if(Compare(newNumberSystem)){
+        // Compare(newNumberSystem);
+        Console.Write($"Текущее = {newNumberSystem}  Pref = {pref}");
+        next = temp - pref;
+        pref = temp;
+        System.Console.WriteLine($" Разница = {next}");
+
+    }
+    // Console.WriteLine($"( {i} ) в ( 10 ) -> ( {newNumberSystem} ) в ( {system} )");
+}
+
+string NewResult(string result)
+{
+    while (result.Length < system)
+    {
+        result = 0 + result;
+    }
+
+    return result;
+}
+
+bool Compare(string nums)
+{
+    int[] sum = new int[10];
+
+    for (int i = 0; i < nums.Length; i++)
+    {
+        if (++sum[Convert.ToInt32(nums[i].ToString())] > 1) return false;
+    }
+
+    return true;
 }
 
 // string newNumberSystem = converter(number, system);
@@ -45,7 +82,6 @@ string converter(int number, int system)
         number = number / system;
     }
     return result;
-
 }
 
 string ReverseConversion(string numb, int system)

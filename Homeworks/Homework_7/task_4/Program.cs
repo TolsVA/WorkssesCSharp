@@ -7,7 +7,7 @@ using System.Text;
 using System.Dynamic;
 using System;
 
-Console.Clear();
+// Console.Clear();
 
 string[] system16 = new string[] { "A", "B", "C", "D", "E", "F" };
 
@@ -61,93 +61,69 @@ string ReversTemp(string revers)
 void AllOptions(string temp, string revers)
 {
     int result = Convert.ToInt32(revers);
-   
+
     string newResult = "";
+
+    string newWord = "";
 
     sw.Start();
 
     while (result <= Convert.ToInt32(temp))
     {
-        caunt++;
-        result = Examination(result);
+        newResult = NewResult(result.ToString());
 
-        while (Compare(result))
+        if (Compare(newResult))
         {
-            result += 9;
-            result = Examination(result);
+            for (int i = 0; i < newResult.Length; i++)
+            {
+                newWord = newWord + originalWord[Convert.ToInt32(newResult[i].ToString())];
+            }
+            addWords(newWord);
+            newWord = "";
         }
 
-        // Console.WriteLine($"result = {result}  MaxElement = {MaxElement(result, 0)}  Сумма = {SummElementResult(result)}" +
-        // $"  {MaxElement(result, 0) != (originalWordLength - 1)} - {SummElementResult(result) != summIndex}");
-
-        newResult = NewResult(Convert.ToString(result));
-
-        addWords(CollectWord(newResult));
-
-        result += 9;
+        result = Convert.ToInt32(SumSystem((newResult), NewResult((originalWordLength - 1).ToString()), originalWordLength));
+        caunt++;
     }
 
     sw.Stop();
 }
 
-string CollectWord(string num) {
-    string newWord = String.Empty;
-    for (int i = 0; i < num.Length; i++) newWord += originalWord[Convert.ToInt32(num[i].ToString())];
-
-    return newWord;
-}
-
-int Examination(int result)
+string SumSystem(string num1, string num2, int system)
 {
-    while (MaxElement(result, 0) != (originalWordLength - 1))
+    string result = "";
+    int temp = 0;
+    int remember = 0;
+    for (int i = num1.Length - 1; i > -1; i--)
     {
-        result += 9;
-        while (SummElementResult(result) != summIndex) result += 9;
-        
+        temp = Convert.ToInt32(num1[i].ToString()) + Convert.ToInt32(num2[i].ToString()) + remember;
+        if (temp < system)
+        {
+            result = temp + result;
+            remember = 0;
+        }
+        else
+        {
+            result = (temp - system) + result;
+            remember = 1;
+        }
+    
     }
+
     return result;
 }
 
-bool Compare(int num)
+bool Compare(string nums)
 {
     int[] sum = new int[10];
 
-    while (num != 0)
+    for (int i = 0; i < nums.Length; i++)
     {
-        if (++sum[num % 10] > 1) return true;
-        num = num / 10;
+        if (++sum[Convert.ToInt32(nums[i].ToString())] > 1) return false;
     }
 
-    return false;
+    return true;
 }
-
-
-
-int MaxElement(int num, int max)
-{
-    if (num == 0) return max;
-
-    int temp = num % 10;
-    if (max < temp) max = temp;
-
-    return MaxElement(num / 10, max);
-}
-
-bool isEmpty(string word) => word.Length == 0;
-
-void allWords(string word, string permutation)
-{
-    if (isEmpty(word))
-    {
-        System.Console.WriteLine(permutation);
-        return;
-    }
-
-    for (int i = 0; i < word.Length; i++) { allWords(word.Remove(i, 1), permutation + word[i]); }
-}
-
-
-int SummElementResult(int number) => number == 0 ? 0 : number % 10 + SummElementResult(number / 10);
 
 string NewResult(string result)
 {
@@ -180,22 +156,53 @@ int factorial(int n) { if (n == 1) return 1; else return n * factorial(n - 1); }
 
 void addWords(string word) { if (indexWords <= words.Length) { words[indexWords++] = word; } }
 
-int AddOne(int num, int system, int digit, int remember)
-{
-    if (num + remember == 0) return 0;
+// int SummElementResult(int number) => number == 0 ? 0 : number % 10 + SummElementResult(number / 10);
 
-    int temp = 0;
-    int modulo = num % 10;
-    if ((modulo + remember) >= system)
-    {
-        remember = 1;
-    }
-    else
-    {
-        temp = modulo + remember;
-        remember = 0;
-    }
-    int newNum = num / 10;
+// int MaxElement(int num, int max)
+// {
+//     if (num == 0) return max;
 
-    return temp * digit + AddOne(newNum, system, digit * 10, remember);
-}
+//     int temp = num % 10;
+//     if (max < temp) max = temp;
+
+//     return MaxElement(num / 10, max);
+// }
+
+// bool isEmpty(string word) => word.Length == 0;
+
+// void allWords(string word, string permutation)
+// {
+//     if (isEmpty(word))
+//     {
+//         System.Console.WriteLine(permutation);
+//         return;
+//     }
+
+//     for (int i = 0; i < word.Length; i++) { allWords(word.Remove(i, 1), permutation + word[i]); }
+// }
+
+// string converter(int number, int system)
+// {
+//     int temp = 0;
+//     string result = "";
+//     while (number > 0)
+//     {
+//         temp = number % system;
+//         string tempString = temp.ToString();
+//         if (temp >= 10)
+//         {
+//             for (int i = 0; i < system16.Length; i++)
+//             {
+//                 if (temp == i + 10)
+//                 {
+//                     tempString = system16[i];
+//                 }
+
+//             }
+//         }
+
+//         result = tempString + result;
+//         number = number / system;
+//     }
+//     return result;
+// }
