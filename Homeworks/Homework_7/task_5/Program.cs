@@ -2,7 +2,7 @@
 
 Console.Clear();
 int num = -1; 
-int system = 4; //Троичная система
+int system = 2; //Троичная система
 
 for (int i = 0; i <= 26; i++)
 {

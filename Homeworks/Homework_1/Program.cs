@@ -1,7 +1,7 @@
 ﻿// Перевод числа из десетичной системы в любую другую
 //100 23 44
-int number = 200;
-int system = 5;
+int number = 9;
+int system = 2;
 int pref = 0;
 int next = 0;
 int temp = 0;
